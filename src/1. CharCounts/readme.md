@@ -1,0 +1,1 @@
+## Write a function to calculate the number of characters _(only alphanumeric)_ present in a string
