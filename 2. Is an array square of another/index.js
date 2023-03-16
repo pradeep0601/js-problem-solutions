@@ -27,22 +27,22 @@ const same1 = (inputArr, sqrInputArr) => {
  */
 const same = (inputArr, sqrInputArr) => {
 
+    if (inputArr.length !== sqrInputArr.length) {
+        return false;
+    }
+
     const inputFrequencies = {}
     for(const input of inputArr) {
         const sqrInput = input*input;
         inputFrequencies[sqrInput] = inputFrequencies[sqrInput] && ++inputFrequencies[sqrInput] || 1;
     }
     
-    console.log(inputFrequencies);
-
     const sqrInputFrequencies = {}
     for(const sqrInput of sqrInputArr) {
         sqrInputFrequencies[sqrInput] = sqrInputFrequencies[sqrInput] && ++sqrInputFrequencies[sqrInput] || 1;
     }
-    console.log(sqrInputFrequencies);
 
     // check frequency
-
     for(const key of Object.keys(inputFrequencies)) {
         if(inputFrequencies[key] !== sqrInputFrequencies[key]){
             return false;
