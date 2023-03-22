@@ -9,4 +9,5 @@ validAnagram('', '') // true
 validAnagram('aaz', 'zza') // false
 validAnagram('anagram', 'nagaram') // true
 validAnagram('awesome', 'awesom') // false
+validAnagram('iceman', 'cinema')) // true
 ```
